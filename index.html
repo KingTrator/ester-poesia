@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ester Lima: UM PALAVRÃO E OUTRA CRIANÇA</title>
+    <style>
+        @charset 'UTF-8';
+        @font-face {
+            font-family: 'H1';
+            src: url(fontes//Pacifico-Regular.ttf);
+        }
+        @font-face {
+            font-family: 'porEster';
+            src: url(fontes/Sacramento-Regular.ttf);
+        }
+
+        :root {
+            --porEster: 'porEster'; 
+            --H1: 'H1';
+        }
+        
+        * {
+            margin: 0px;
+        }
+        body {
+            background-color: white;
+        }
+        header {
+            background-color: #b6c6bb;
+            margin-bottom: 9px;
+            padding: 3px;
+            text-align: center;
+            font-size: 2vw;
+        }
+        h1 {
+            font-size: 4vw;
+            font-family: var(--H1);
+            letter-spacing: 5px;
+        }
+        header > p {
+            font-family: 'Book Antiqua';
+            padding: 3px;
+            font-family: var(--porEster);
+            font-size: 3.5vw;
+            margin-left: 0px;
+        }
+        span#inline {
+            color:rgba(255, 255, 255, 0.37);
+            background-color: #92c0a175;
+            font-size: 3vw;
+        }
+        span#inline:hover {
+            color: white;
+            background-color: #92c0a1;
+        }
+        p {
+            margin-left: 9px;
+        }
+        
+        div {
+            font-family: 'Book Antiqua';
+            font-size: 3vw;
+            line-height: 6vw;
+        }
+
+        div.imagem {
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
+        }
+
+        div.imagem#img1 {
+            background-image: url(imagens/fofo.jpg);
+        }
+
+        div.imagem#img2 {
+            background-image: url(imagens/cat-attack.jpg);
+        }
+
+        span {
+            display: block;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.479);
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        footer {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>UM PALAVRÃO E OUTRA CRIANÇA</h1>
+        <p>por Ester Lima</p>
+        <span id="inline" onclick="Luz()">
+            Desligar Luz
+        </span>
+    </header>
+
+    <main>
+        <div class="normal">
+            <p>
+                A criança olha o vidro com geleia <br>
+                Ela está na ponta dos pés, <br>
+                Com os dedinhos agarrados à mesa <br>
+                
+                Ela olha pra direita, pra esquerda, pra <br>
+                cima e pra baixo, se remexe e, enfim, <br>
+                agarra o pote! <br>
+                </div> <br>
+            </p>
+            <div class="normal">
+            <p>
+                Emoção, emoção! Pulinhos, pulinhos! <br>
+                E pooft, mergulho ao chão. <br>
+                
+                Goiabada de marmelo, <br>
+                numa história de Alice, <br>
+                Será que dá certo? <br>
+                </div> <br>
+            </p>
+            <div class="imagem" id="img1">
+            <span>
+                <p>
+                    Alice, Alice, não caia no velho truque, no <br>
+                    mundo real, o mel é só mel e o fel é só <br>
+                    fel. <br>
+                    
+                    Não coma nada que nesse pote esteja, <br>
+                    Não é hora de entender <br>
+                    A diferença entre o vil e o advil (aquele <br>
+                    que diz que a dor sumiu) <br>
+                </p>
+            </span>
+            </div> <br>
+            <div class="normal" id="espaco">
+            <p>
+                Tá na hora de ser só uma garotinha <br>
+                esperando o ônibus da escola... sozinha <br>
+                Mas não tão só!
+                Alice, querida, fuja, esconda esse pote <br>
+                se quiser que tudo continue igual... não <br>
+                deixe a mamãe ver... Seu papai estará <br>
+                em apuros. <br><br>
+            </p>
+             </div> <br>
+            <div class="normal">
+                <p>
+                    Mas você não tem como saber, não é? E <br>
+                    o barulho já acionou a todos. <br>
+                    Diacho! O filhote de Belzebu cometeu <br>
+                    um ato tão infame e tão antigo quanto a <br>
+                    criação: a traição. <br>
+                </p>
+            </div> <br>
+            <div  class="imagem" id="img2">
+            <span>
+                <p>
+                    Sua mãe, doce Alice, soube no momento <br>
+                    que viu o pote. Ela então constatou: <br>
+                    
+                    Papai tá com a tia! Aquela, rapariga, <br>
+                    talarica, apática e manca! <br>
+                    
+                    É hora dele ver lagartas e gatos em <br>
+                    dentes, suplicando: Shakira, não deixe a <br>
+                    criança saber! <br>
+                </p>
+            </span>
+            </div> 
+    </main>
+    <footer>&copy; KingTrator</footer>
+    <script>
+        function Luz(){
+            var object = document.querySelector('span#inline')
+            var fundo = document.getElementsByTagName('body')[0]
+            if (object.innerHTML == 'Desligar Luz'){
+                object.innerHTML = 'Ligar Luz'
+                fundo.style.background = 'rgba(0, 0, 0, 0.425)'
+            } else {
+                object.innerHTML = 'Desligar Luz'
+                fundo.style.background = 'white'
+            }
+        }
+
+    </script>
+</body>
+</html>
